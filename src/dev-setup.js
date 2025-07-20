@@ -25,13 +25,21 @@ process.on('uncaughtException', (error) => {
 });
 
 function runDelegate(script, yFlag, extra = '', verbose = false) {
-    let cmd = `node ${path.join(process.cwd(), script)}${yFlag}`;
+    // Get the directory of this file
+    let __dirname = path.dirname(new URL(import.meta.url).pathname);
+
+    // On Windows, remove leading slash from pathname (e.g. /C:/path -> C:/path)
+    if (process.platform === 'win32' && __dirname.startsWith('/')) {
+        __dirname = __dirname.slice(1);
+    }
+
+    const scriptPath = path.join(__dirname, script);
+    let cmd = `node "${scriptPath}"${yFlag}`;
     if (extra) cmd += ` ${extra}`;
     if (verbose) cmd += ' --verbose';
     try {
         execSync(cmd, { stdio: 'inherit' });
     } catch (e) {
-
         if (
             (e instanceof Error && e.name === 'ExitPromptError') ||
             (e && typeof e === 'object' && (e.status === 130 || e.signal === 'SIGINT'))
