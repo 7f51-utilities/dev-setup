@@ -1,4 +1,4 @@
-#!/usr/bin / env node
+#!/usr/bin/env node
 
 // Gracefully handle Ctrl+C (SIGINT) to halt all further execution
 process.on('SIGINT', () => {

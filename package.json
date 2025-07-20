@@ -6,6 +6,16 @@
     "bin": {
         "dev-setup": "./dev-setup.js"
     },
+    "files": [
+        "dev-setup.js",
+        "generate-docker-compose.js",
+        "generate-tasks.js",
+        "setup-semantic-release.js",
+        "delegate-exit-handler.js",
+        "setup-helper.js",
+        "release.config.cjs",
+        ".templates/"
+    ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
