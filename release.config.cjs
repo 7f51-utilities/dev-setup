@@ -12,7 +12,7 @@ const config = {
         ],
         [
             '@semantic-release/npm',
-            { npmPublish: false, access: 'public' }
+            { npmPublish: true, access: 'public' }
         ],
         [
             '@semantic-release/git',
