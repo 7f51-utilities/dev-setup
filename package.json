@@ -2,9 +2,8 @@
     "name": "@7f51-utilities/dev-setup",
     "version": "1.0.0-beta.1",
     "type": "module",
-    "main": "index.js",
     "bin": {
-        "dev-setup": "./dev-setup.js"
+        "dev-setup": "./src/dev-setup.js"
     },
     "files": [
         "dev-setup.js",

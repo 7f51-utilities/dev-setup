@@ -22,7 +22,7 @@ async function main() {
     }
 
     // Load last-used XAMPP path from .setup-history.json if available
-    let historyPath = '.setup-history.json';
+    let historyPath = './setup-history.json';
     let lastUsedXamppPath = null;
     if (fs.existsSync(historyPath)) {
         try {
