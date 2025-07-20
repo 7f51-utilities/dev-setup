@@ -1,0 +1,6 @@
+.vscode/
+node_modules/
+.setup-history.json
+docker-compose.yml
+tasks.json
+pg-init/
