@@ -1,5 +1,5 @@
 {
-    "name": "learn",
+    "name": "@7f51-utilities/dev-setup",
     "version": "1.0.0",
     "type": "module",
     "main": "index.js",
