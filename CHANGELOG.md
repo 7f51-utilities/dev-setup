@@ -1,3 +1,10 @@
+# [1.0.0-beta.4](https://github.com/7f51-utilities/dev-setup/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2025-07-21)
+
+
+### Bug Fixes
+
+* change  package name from dev-setup to dev init ([a906eac](https://github.com/7f51-utilities/dev-setup/commit/a906eac3e1d140792bb193daf34d764e0ee85a8c))
+
 # [1.0.0-beta.3](https://github.com/7f51-utilities/dev-setup/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2025-07-20)
 
 
