@@ -1,9 +1,9 @@
 {
-    "name": "@7f51-utilities/dev-setup",
+    "name": "@7f51-utilities/dev-init",
     "version": "1.0.0-beta.2",
     "type": "module",
     "bin": {
-        "dev-setup": "./src/dev-setup.js"
+        "dev-init": "./src/dev-setup.js"
     },
     "files": [
         "dev-setup.js",
