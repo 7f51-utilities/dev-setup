@@ -25,6 +25,33 @@ async function main() {
     // Always proceed with Semantic Release setup (no prompt)
     console.log('Setting up Semantic Release...');
 
+    const { selectedFlags } = await inquirer.prompt([
+        {
+            type: 'checkbox',
+            name: 'selectedFlags',
+            message: 'Select npm install flags to use:',
+            choices: [
+                { name: '--legacy-peer-deps', value: '--legacy-peer-deps' },
+                { name: '--force', value: '--force' },
+                { name: '--no-audit', value: '--no-audit' },
+                { name: 'Other (custom)', value: 'other' }
+            ]
+        }
+    ]);
+
+    let extraFlags = selectedFlags.filter(f => f !== 'other');
+    if (selectedFlags.includes('other')) {
+        const { customFlag } = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'customFlag',
+                message: 'Enter additional npm install flags (space-separated):',
+                default: ''
+            }
+        ]);
+        if (customFlag) extraFlags.push(customFlag);
+    }
+
     copyWorkflowTemplate('release.yml', 'release.yml');
     copyWorkflowTemplate('pre-release.yml', 'pre-release.yml');
 
