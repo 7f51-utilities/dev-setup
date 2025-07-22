@@ -3,17 +3,21 @@ import fs from 'fs';
 import inquirer from 'inquirer';
 import { setupDelegateExitHandlers } from './delegate-exit-handler.js';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 setupDelegateExitHandlers();
 
 const workflowsDir = '.github/workflows';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+
 if (!fs.existsSync(workflowsDir)) {
     fs.mkdirSync(workflowsDir, { recursive: true });
 }
 
 // Helper to copy a template if not exists
 function copyWorkflowTemplate(templateName, destName) {
-    const templatePath = path.join('.templates', templateName);
+    const templatePath = path.join(__dirname, '..', '.templates', templateName);
     const destPath = path.join(workflowsDir, destName);
     if (!fs.existsSync(destPath) && fs.existsSync(templatePath)) {
         fs.copyFileSync(templatePath, destPath);
