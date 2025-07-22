@@ -1,3 +1,10 @@
+# [1.0.0-beta.6](https://github.com/7f51-utilities/dev-setup/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2025-07-22)
+
+
+### Bug Fixes
+
+* github workflow setup path for semantic release ([58754b0](https://github.com/7f51-utilities/dev-setup/commit/58754b068f7358547f02b717427e1e4c097ceb65))
+
 # [1.0.0-beta.5](https://github.com/7f51-utilities/dev-setup/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2025-07-21)
 
 
