@@ -1,3 +1,10 @@
+# [1.0.0-beta.5](https://github.com/7f51-utilities/dev-setup/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2025-07-21)
+
+
+### Features
+
+* add npm install flags selection to Semantic Release setup ([a9709d0](https://github.com/7f51-utilities/dev-setup/commit/a9709d02cd2093d310698801dd97c42c40afe2e2))
+
 # [1.0.0-beta.4](https://github.com/7f51-utilities/dev-setup/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2025-07-21)
 
 
