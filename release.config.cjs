@@ -12,7 +12,12 @@ const config = {
         ],
         [
             '@semantic-release/npm',
-            { npmPublish: true, access: 'public' }
+            {
+                npmPublish: true,
+                access: 'public',
+                // Always use 'latest' dist-tag, even for prereleases
+                distTag: 'latest'
+            }
         ],
         [
             '@semantic-release/git',
