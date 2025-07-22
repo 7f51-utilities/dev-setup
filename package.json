@@ -1,6 +1,6 @@
 {
     "name": "@7f51-utilities/dev-init",
-    "version": "1.0.0-beta.5",
+    "version": "1.0.0-beta.6",
     "type": "module",
     "bin": {
         "dev-init": "./src/dev-setup.js"
